@@ -37,9 +37,10 @@ end
 
 def self.students_below_12th_grade
   sql = "SELECT * FROM students WHERE grade < 12"
-  binding.pry
-  DB[:conn].execute(sql)
+  DB[:conn].execute(sql).collect do |row|
+    self.new_from_db(row)
   end
+end
 
   def self.first_X_students_in_grade_10(x)
     sql = "SELECT * FROM students WHERE grade = 10 LIMIT ?"
