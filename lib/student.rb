@@ -72,10 +72,10 @@ def self.students_below_12th_grade
   #     grade TEXT
   #   )
   #   SQL
-  # 
+  #
   #   DB[:conn].execute(sql)
   # end
-  # 
+  #
   # def self.drop_table
   #   sql = "DROP TABLE IF EXISTS students"
   #   DB[:conn].execute(sql)
