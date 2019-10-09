@@ -1,3 +1,5 @@
+require 'pry'
+
 class Student
   attr_accessor :id, :name, :grade
 
@@ -35,6 +37,7 @@ end
 
 def self.students_below_12th_grade
   sql = "SELECT * FROM students WHERE grade < 12"
+  binding.pry
   DB[:conn].execute(sql)
   end
 
