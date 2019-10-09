@@ -14,7 +14,7 @@ class Student
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
     sql = <<-SQL
-    # remember each row should be a new instance of the Student class	    SELECT *
+    SELECT *
     FROM students
     SQL
     DB[:conn].execute(sql).collect do |row|
